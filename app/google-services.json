@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "388404775987",
+    "project_id": "alert-android-a45e8",
+    "storage_bucket": "alert-android-a45e8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388404775987:android:f0358b96cce268c2996746",
+        "android_client_info": {
+          "package_name": "com.aristeridis.alert_android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSo2gCCfj20VJLrOLfDeodhI5j_uWrykI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
