@@ -3,33 +3,23 @@ package com.aristeridis.alert_android;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity {
+public class StaffActivity extends AppCompatActivity {
 
     private Button buttonLogout;
-    private TextView textViewWelcome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_staff);
 
-        textViewWelcome = findViewById(R.id.textViewWelcome);
         buttonLogout = findViewById(R.id.buttonLogout);
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if(user != null){
-            textViewWelcome.setText("Welcome, " + user.getEmail());
-        }
-
-        // Logout
         buttonLogout.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            startActivity(new Intent(StaffActivity.this, LoginActivity.class));
             finish();
         });
     }

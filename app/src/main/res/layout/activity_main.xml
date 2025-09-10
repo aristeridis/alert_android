@@ -1,32 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
-        android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="24dp">
 
     <TextView
-            android:id="@+id/titleTextView"
-            android:text="Τουριστικά Αξιοθέατα"
-            android:textSize="24sp"
-            android:textStyle="bold"
+            android:id="@+id/textViewWelcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:paddingBottom="16dp"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/landmarksRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_marginBottom="16dp"/>
+            android:text="Welcome, User!"
+            android:textSize="20sp"
+            android:paddingBottom="20dp"/>
 
     <Button
-            android:id="@+id/addLandmarkButton"
-            android:text="Add Landmark"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
+            android:id="@+id/buttonLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"/>
 </LinearLayout>
