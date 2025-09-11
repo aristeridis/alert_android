@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">AlertApp</string>
 
-    <string-array name="danger_types">
+    <string-array name="risk_types">
         <item>Φωτιά</item>
         <item>Πλημμύρα</item>
         <item>Τροχαίο</item>

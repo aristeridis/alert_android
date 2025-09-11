@@ -39,5 +39,10 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+        Button btnReport = findViewById(R.id.btn_report);
+        btnReport.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ReportActivity.class);
+            startActivity(intent);
+        });
     }
 }
