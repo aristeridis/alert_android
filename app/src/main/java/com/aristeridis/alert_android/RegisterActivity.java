@@ -44,12 +44,13 @@ public class RegisterActivity extends AppCompatActivity {
             mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            if (user != null) {
-                                Map<String, Object> userRole = new HashMap<>();
-                                userRole.put("role", "user");
-                                db.collection("users").document(user.getUid())
-                                        .set(userRole)
+                            String uid = mAuth.getCurrentUser().getUid();
+                            Map<String, Object> user = new HashMap<>();
+                            if (uid != null) {
+                                user.put("email", email);
+                                user.put("role", "user");
+                                db.collection("users").document(uid)
+                                        .set(user)
                                         .addOnSuccessListener(aVoid -> {
                                             Toast.makeText(RegisterActivity.this, "Registered successfully", Toast.LENGTH_SHORT).show();
                                             startActivity(new Intent(RegisterActivity.this, MainActivity.class));

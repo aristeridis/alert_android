@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Alert-android</string>
+    <string name="app_name">AlertApp</string>
+
+    <string-array name="danger_types">
+        <item>Φωτιά</item>
+        <item>Πλημμύρα</item>
+        <item>Τροχαίο</item>
+        <item>Ιατρικό Περιστατικό</item>
+        <item>Άλλο</item>
+    </string-array>
 </resources>
